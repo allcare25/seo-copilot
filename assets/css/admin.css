@@ -1,0 +1,270 @@
+.seocp-wrap .seocp-status-cards {
+	display: flex;
+	gap: 16px;
+	flex-wrap: wrap;
+	margin: 20px 0;
+}
+
+.seocp-wrap .seocp-card {
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 6px;
+	padding: 16px;
+	width: 300px;
+	box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+.seocp-wrap .seocp-card h2 {
+	margin-top: 0;
+	font-size: 15px;
+}
+
+.seocp-wrap .seocp-card-disabled {
+	opacity: 0.65;
+}
+
+.seocp-wrap .seocp-detail-panel {
+	background: #f6f7f7;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+	padding: 10px;
+	font-size: 13px;
+}
+
+.seocp-wrap .seocp-detail-panel ul {
+	margin: 0 0 0 18px;
+	list-style: disc;
+}
+
+.seocp-wrap .seocp-badge-pass {
+	color: #1a7f37;
+	font-weight: 600;
+}
+
+.seocp-wrap .seocp-badge-fail {
+	color: #b32d2e;
+	font-weight: 600;
+}
+
+/* 長いタイトル・URLでテーブルが横に広がってスコア列が画面外に押し出されるのを防ぐ */
+.seocp-wrap table.widefat {
+	table-layout: fixed;
+	width: 100%;
+}
+
+.seocp-wrap table.widefat th,
+.seocp-wrap table.widefat td {
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+}
+
+/* 見出しラベルは短い固定文言なので折り返さない（狭い列で縦1文字ずつ積まれるのを防ぐ) */
+.seocp-wrap table.widefat th {
+	white-space: nowrap;
+}
+
+.seocp-wrap .seocp-permalink {
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	max-width: 100%;
+	font-size: 12px;
+}
+
+/* スコア・ステータス列は太字バッジにして視認しやすくする */
+.seocp-wrap .seocp-score-cell,
+.seocp-wrap .seocp-index-status-cell {
+	white-space: nowrap;
+	font-weight: 600;
+}
+
+.seocp-wrap .seocp-index-status-cell {
+	text-align: right;
+}
+
+.seocp-wrap .seocp-score-cell {
+	text-align: left;
+	font-size: 14px;
+}
+
+/* AI検索チェック画面の操作列: ボタン2つを縦にきれいに積む(横幅不足で不揃いに折り返すのを防ぐ) */
+.seocp-wrap .seocp-action-cell {
+	white-space: normal;
+}
+
+.seocp-wrap .seocp-action-cell .button {
+	display: block;
+	width: 100%;
+	margin: 0 0 6px 0;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+.seocp-wrap .seocp-action-cell .button:last-child {
+	margin-bottom: 0;
+}
+
+@media (max-width: 782px) {
+	.seocp-wrap table.widefat {
+		table-layout: auto;
+	}
+}
+
+/* AI提案画面: 1段目=タイトル+操作、2段目=結果を全幅表示 */
+.seocp-wrap .seocp-suggestion-table {
+	border-collapse: collapse;
+}
+
+.seocp-wrap .seocp-suggestion-group > tr:first-child > td {
+	border-bottom: none;
+	padding-bottom: 8px;
+}
+
+.seocp-wrap .seocp-suggestion-result-row > td {
+	padding-top: 0;
+	border-top: none;
+}
+
+.seocp-wrap .seocp-suggestion-result-row .seocp-detail-panel {
+	margin: 0;
+}
+
+.seocp-wrap .seocp-alt > tr > td {
+	background: #f6f7f7;
+}
+
+.seocp-wrap .seocp-suggestion-result {
+	font-size: 13px;
+}
+
+.seocp-wrap .seocp-suggestion-result > div:empty {
+	display: none;
+}
+
+.seocp-title-suggestion-list {
+	margin: 4px 0 0;
+	padding-left: 18px;
+}
+
+.seocp-title-suggestion-list li {
+	margin-bottom: 6px;
+}
+
+.seocp-title-suggestion-text {
+	margin-right: 8px;
+}
+
+/* v0.7.0: 差分プレビュー */
+.seocp-diff-preview-box {
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+	padding: 12px;
+	font-size: 13px;
+	line-height: 1.8;
+	max-height: 420px;
+	overflow-y: auto;
+	white-space: pre-wrap;
+}
+
+.seocp-diff-preview-box ins {
+	background: #d9f2df;
+	color: #1a7f37;
+	text-decoration: underline;
+	text-decoration-style: solid;
+}
+
+.seocp-diff-preview-box del {
+	background: #fbe4e4;
+	color: #b32d2e;
+	text-decoration: line-through;
+}
+
+/* v0.9.7: FAQ案/内部リンク候補のその場反映チェックリスト */
+.seocp-faq-suggestion-list li,
+.seocp-links-suggestion-list li {
+	margin-bottom: 8px;
+}
+
+.seocp-faq-suggestion-list label,
+.seocp-links-suggestion-list label {
+	cursor: pointer;
+}
+
+/* v0.9.7: プレビュー/編集パネル */
+.seocp-wrap .seocp-preview-row > td {
+	padding-top: 0;
+	border-top: none;
+}
+
+.seocp-wrap .seocp-preview-panel {
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+	padding: 12px 16px;
+	margin: 4px 0 10px;
+}
+
+.seocp-diff-nochange {
+	color: #666;
+	font-style: italic;
+}
+
+/* v0.7.0: 一括チェックの進捗バー */
+.seocp-progress-bar {
+	background: #e5e5e5;
+	border-radius: 4px;
+	height: 10px;
+	width: 100%;
+	max-width: 500px;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+
+.seocp-progress-bar-fill {
+	background: #2271b1;
+	height: 100%;
+	width: 0%;
+	transition: width 0.2s ease;
+}
+
+/* v0.7.0: 効果測定カード */
+.seocp-effect-record table.widefat td:first-child {
+	font-weight: 600;
+	width: 90px;
+}
+
+/* CTR改善ページからジャンプしてきた記事行のハイライト */
+.seocp-highlight-target {
+	outline: 3px solid #C9962C;
+	outline-offset: -2px;
+}
+
+/* コンテンツ劣化アラート */
+.seocp-decay-count {
+	color: #b32d2e;
+	font-weight: 600;
+	font-size: 14px;
+}
+
+/* メタディスクリプションCTR最適化 */
+.seocp-current-meta-desc {
+	margin-top: 4px;
+	font-size: 12px;
+	color: #555;
+}
+.seocp-meta-desc-label {
+	font-weight: 600;
+	margin-right: 4px;
+}
+.seocp-meta-desc-length {
+	color: #888;
+	margin-left: 4px;
+}
+.seocp-meta-desc-empty {
+	color: #b32d2e;
+	font-style: italic;
+}
