@@ -1,0 +1,2 @@
+# seo-copilot
+Google Search ConsoleとAIを活用してWordPressのSEO改善を支援するプラグイン
